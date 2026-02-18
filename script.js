@@ -6,10 +6,10 @@ form.addEventListener("submit", (event) => {
 
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value;
-    const confirmPassword = document.getElementById("confirmPassword").value;
+    const Parol = document.getElementById("Parol").value;
+    const Parol_PER = document.getElementById("Parol_PER").value;
 
-    if (!name || !email || !password || !confirmPassword) {
+    if (!name || !email || !Parol || !Parol_PER) {
         output.textContent = "Всі поля повинні бути заповнені.";
         return;
     }
@@ -24,10 +24,10 @@ form.addEventListener("submit", (event) => {
         return;
     }
 
-    if (password !== confirmPassword) {
+    if (Parol !== Parol_PER) {
         output.textContent = "Паролі не співпадають.";
         return;
     }
 
-    output.textContent = `Ім'я: ${name}, Email: ${email}. Реєстрація успішна!`;
+    output.textContent = `${name}, Реєстрація успішна`;
 });
